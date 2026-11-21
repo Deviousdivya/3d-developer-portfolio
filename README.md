@@ -2,7 +2,7 @@
 
 An interactive, scroll-driven portfolio set on a virtual developer desk. As you scroll, the camera moves around a 3D workspace — monitors, headphones, framed photos — and each stop tells a part of the story: about, toolkit, projects, experience and contact.
 
-> **Live site:** _add your Vercel URL here_
+> **Live site:** [3d-developer-portfolio-delta.vercel.app](https://3d-developer-portfolio-delta.vercel.app)
 
 ## Highlights
 
