@@ -37,13 +37,14 @@ export default function Projects() {
           {projects.map((p, i) => (
             <motion.div
               key={p.title}
+              className={p.featured ? "feat-cell" : undefined}
               initial={{ opacity: 0, y: 80, rotateX: 28, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
               viewport={{ once: true, margin: "-70px" }}
               transition={{ duration: 0.9, delay: (i % 2) * 0.12, ease: [0.22, 1, 0.36, 1] }}
               style={{ transformPerspective: 900 }}
             >
-              <Tilt className={"card-wrap" + (active === i ? " active" : "")} max={7}>
+              <Tilt className={"card-wrap" + (active === i ? " active" : "") + (p.featured ? " featured" : "")} max={7}>
                 <article
                   className="card"
                   role="button"
@@ -60,6 +61,7 @@ export default function Projects() {
                     <Preview p={p} />
                     <i className="shine" />
                     {active === i && <b className="on-monitor">● on monitor</b>}
+                    {p.featured && <b className="feat-badge">★ Featured · BidVeda</b>}
                   </div>
                   <h3>{p.title}</h3>
                   <p className="tagline">{p.tag}</p>
@@ -79,9 +81,11 @@ export default function Projects() {
                           Live app ↗
                         </a>
                       )}
-                      <a className="card-link" href={p.github} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
-                        GitHub ↗
-                      </a>
+                      {p.github && (
+                        <a className="card-link" href={p.github} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                          GitHub ↗
+                        </a>
+                      )}
                     </span>
                   </div>
                 </article>

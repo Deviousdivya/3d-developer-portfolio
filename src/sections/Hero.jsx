@@ -36,7 +36,7 @@ export default function Hero() {
       <motion.div className="panel" style={{ x: sx, y: sy, opacity: fade }}>
         <motion.div style={{ y: lift }}>
           <motion.p className="eyebrow" {...rise(0.2)}>
-            <span className="prompt">$</span>&nbsp;Open to work<span className="caret" />
+            Open to work<span className="caret" />
           </motion.p>
           <SplitText as="h1" className="display" text={profile.name} delay={0.35} />
           <motion.p className="role" {...rise(0.7)}>

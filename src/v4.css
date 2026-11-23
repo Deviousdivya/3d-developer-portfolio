@@ -318,3 +318,20 @@ h3 { font-weight: 700; letter-spacing: -0.01em; }
 .nav-links .nav-resume { border: 1px solid var(--line); border-radius: 999px; padding: 6px 15px; color: var(--ink); font-weight: 500; }
 .nav-links .nav-resume:hover { border-color: var(--accent); color: var(--accent); }
 @media (max-width: 860px) { .nav-links .nav-resume { border: 0; border-radius: 0; padding: 16px 6vw; color: var(--accent); } }
+
+/* ---- highlighted: scraping / OCR skills and the featured BidVeda project ---- */
+.chip.hot { border-color: var(--accent); background: rgba(157, 184, 232, 0.14); color: #fff; box-shadow: 0 0 0 1px rgba(157, 184, 232, 0.25), 0 6px 22px rgba(157, 184, 232, 0.18); }
+.group.hot { color: var(--accent); }
+.group.hot::after { content: " ★"; }
+.card-wrap.featured { grid-column: 1 / -1; }
+.card-wrap.featured .card { border-color: var(--accent); box-shadow: 0 0 0 1px rgba(157, 184, 232, 0.35), 0 24px 70px rgba(0, 0, 0, 0.45); background: linear-gradient(135deg, rgba(157, 184, 232, 0.12), rgba(9, 13, 21, 0.82) 55%); display: grid; grid-template-columns: 1.15fr 1fr; column-gap: 24px; align-content: start; }
+.card-wrap.featured .card > * { grid-column: 2; }
+.card-wrap.featured .card > .thumb { grid-column: 1; grid-row: 1 / span 6; align-self: start; }
+.feat-badge { position: absolute; left: 10px; bottom: 10px; z-index: 3; font: 600 0.7rem "JetBrains Mono", monospace; color: #06121f; background: #ffd27a; padding: 4px 10px; border-radius: 999px; }
+@media (max-width: 860px) {
+  .card-wrap.featured .card { display: block; }
+}
+
+.feat-cell { grid-column: 1 / -1; }
+.card-wrap.featured .card h3 { font-size: 1.5rem; }
+@media (max-width: 860px) { .feat-cell { grid-column: auto; } }

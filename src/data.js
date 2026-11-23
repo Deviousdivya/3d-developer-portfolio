@@ -4,13 +4,13 @@ export const profile = {
   handle: "Deviousdivya",
   email: "divyabharat1407@gmail.com",
   location: "Ghaziabad, India",
-  title: "Full-Stack Developer",
+  title: "Full-Stack Developer · Web Scraping",
   words: ["Full-stack", "AI-powered", "Interactive"],
   intro:
-    "B.Tech Computer Science student and full-stack developer building AI-powered web apps with React, Django and Three.js.",
+    "Full-stack developer with web scraping and OCR-solving skills, building AI-powered web apps with React, Django and Three.js.",
   bio: [
     "I'm a B.Tech Computer Science student at KIET Group of Institutions (CGPA 8.0 till the 6th semester) who builds full-stack web products — from React and Three.js front-ends to Django back-ends and machine-learning models.",
-    "I'm currently a Full Stack Intern at Sarthi EPC, after an SDE internship at StudyDekho. I've been a national-level hackathon finalist twice and an active member of my college's DevOps tech club for two years.",
+    "I'm currently a Full Stack Intern at Sarthi EPC, after an SDE internship at StudyDekho. Beyond the core stack I build web scraping and OCR-solving tools, and I'm the developer behind BidVeda's Partial Builder. I've been a national-level hackathon finalist twice and an active member of my college's DevOps tech club for two years.",
   ],
   stats: [
     { value: "10+", label: "Projects shipped" },
@@ -22,6 +22,7 @@ export const profile = {
 export const skills = [
   { group: "Frontend", items: ["HTML", "CSS", "JavaScript", "React", "Three.js", "GSAP", "Tailwind CSS", "Bootstrap"] },
   { group: "Backend", items: ["Django", "Django REST Framework", "Node.js"] },
+  { group: "Scraping & OCR", hot: true, items: ["Web Scraping", "OCR Solving", "OCR Solver"] },
   { group: "Programming & databases", items: ["Python", "C", "C++", "MySQL", "PostgreSQL"] },
   { group: "Tools & AI tools", items: ["Git", "GitHub", "VS Code", "Antigravity", "Codex", "Claude", "Prompt Engineering"] },
 ];
@@ -29,6 +30,20 @@ export const skills = [
 // `image` = desktop screenshot of the live app (project card), `tall` = phone-width full-page screenshot
 // (it scrolls on the 3D monitor when the project is clicked). `design` is only a fallback drawing.
 export const projects = [
+  {
+    title: "Partial Builder",
+    tag: "BidVeda · government bidding platform",
+    featured: true,
+    design: "telecom",
+    blurb:
+      "Built for BidVeda — the ecosystem for government bidders in India, which finds every tender that fits, reads every page and readies the bid.",
+    stack: ["BidVeda", "Government tenders", "Full-stack"],
+    live: "https://bidveda.in/",
+    github: null,
+    host: "bidveda.in",
+    image: "/projects/bidveda-desk.jpg",
+    tall: "/projects/bidveda-tall.jpg",
+  },
   {
     title: "Smart Roots",
     tag: "AI-powered learning platform",

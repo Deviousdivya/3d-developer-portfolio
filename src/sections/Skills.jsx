@@ -4,10 +4,10 @@ import Reveal from "../components/Reveal";
 import { SplitText, Tilt } from "../components/Interact";
 import { skills } from "../data";
 
-function Chip({ children, i, inView }) {
+function Chip({ children, i, inView, hot }) {
   return (
     <motion.span
-      className="chip"
+      className={"chip" + (hot ? " hot" : "")}
       initial={{ opacity: 0, scale: 0.4, y: 20 }}
       animate={inView ? { opacity: 1, scale: 1, y: 0 } : {}}
       transition={{ type: "spring", stiffness: 260, damping: 16, delay: 0.25 + i * 0.05 }}
@@ -37,10 +37,10 @@ export default function Skills() {
           <SplitText className="title" text="The tools I reach for." />
           {skills.map((g, gi) => (
             <Reveal key={g.group} delay={0.1 + gi * 0.1} x={-30} y={0}>
-              <h3 className="group">{g.group}</h3>
+              <h3 className={"group" + (g.hot ? " hot" : "")}>{g.group}</h3>
               <div className="chips">
                 {g.items.map((item) => (
-                  <Chip key={item} i={n++} inView={inView}>
+                  <Chip key={item} i={n++} inView={inView} hot={g.hot}>
                     {item}
                   </Chip>
                 ))}
