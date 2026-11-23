@@ -56,6 +56,11 @@ export default function Hero() {
                 Let's talk
               </a>
             </Magnetic>
+            <Magnetic>
+              <a href="/Divya_Bharat_Resume.pdf" download="Divya_Bharat_Resume.pdf" className="btn ghost resume-btn">
+                Download resume ↓
+              </a>
+            </Magnetic>
           </motion.div>
           <motion.div className="scroll-hint" {...rise(1.3)}>
             <span className="mouse" /> Scroll to explore the setup

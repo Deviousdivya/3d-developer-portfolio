@@ -10,6 +10,7 @@ An interactive, scroll-driven portfolio set on a virtual developer desk. As you 
 - **Real project previews** — click a project card and its live UI opens on the 3D monitor, scrolling through the real page.
 - **Contact form on the monitor** — the last page flies the camera up to a screen where the form lives; messages are delivered to my inbox through [Resend](https://resend.com).
 - **Responsive by design** — separate camera framing for phones and laptops; the form moves to the portrait monitor on small screens.
+- **Download resume** — one click from the nav bar, hero, contact bar and footer.
 - **Polished motion** — smooth scrolling (Lenis), animated text reveals, tilt cards and a looping 3D mouse that clicks the Send button.
 
 ## Tech stack
@@ -21,7 +22,7 @@ An interactive, scroll-driven portfolio set on a virtual developer desk. As you 
 | Motion | Motion (Framer Motion), Lenis smooth scroll |
 | Backend | Vercel serverless function (`api/contact.js`) |
 | Email | Resend REST API |
-| Styling | Hand-written CSS |
+| Styling | Hand-written CSS — Syne (headings), IBM Plex Sans (body), JetBrains Mono (code accents) |
 
 ## Project structure
 
@@ -65,6 +66,7 @@ The dev server also serves `/api/contact`, so the contact form works locally.
 - Edit `src/data.js` for text, skills, projects, experience and links.
 - To change a project's preview, replace its screenshots in `public/projects/` (desktop `*-desk.jpg`, phone-width full page `*-tall.jpg`).
 - Camera stops for each section live in `src/three/keyframes.js`.
+- To update the downloadable resume, replace `public/Divya_Bharat_Resume.pdf` (keep the same file name).
 
 ## Credits
 

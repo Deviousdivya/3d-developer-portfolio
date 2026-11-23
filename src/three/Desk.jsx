@@ -493,9 +493,9 @@ const BRANDS = {
       x.font = "104px Pacifico, 'Brush Script MT', cursive";
       x.fillText("Coca-Cola", W / 2, mid + 22);
       x.shadowColor = "transparent";
-      x.font = "600 24px 'Space Grotesk', sans-serif";
+      x.font = "600 24px 'IBM Plex Sans', sans-serif";
       x.fillText("ORIGINAL TASTE", W / 2, bot - 70);
-      x.font = "500 18px 'Space Grotesk', sans-serif";
+      x.font = "500 18px 'IBM Plex Sans', sans-serif";
       x.fillText("330 ml  ·  e", W / 2, bot - 40);
     },
   },
@@ -532,13 +532,13 @@ const BRANDS = {
       x.shadowBlur = 10;
       x.fillStyle = "#fff";
       x.textAlign = "left";
-      x.font = "700 128px 'Space Grotesk', sans-serif";
+      x.font = "800 112px 'Syne', sans-serif";
       x.fillText("PEPSI", cx + r + 36, cy + 44);
       x.shadowColor = "transparent";
       x.textAlign = "center";
-      x.font = "600 24px 'Space Grotesk', sans-serif";
+      x.font = "600 24px 'IBM Plex Sans', sans-serif";
       x.fillText("BOLD  ·  REFRESHING", W / 2, bot - 70);
-      x.font = "500 18px 'Space Grotesk', sans-serif";
+      x.font = "500 18px 'IBM Plex Sans', sans-serif";
       x.fillText("330 ml  ·  e", W / 2, bot - 40);
     },
   },
@@ -616,7 +616,7 @@ function SodaCan({ pos, rot = 0, brand, scale = 1.15 }) {
   }, []);
   useEffect(() => {
     let alive = true;
-    Promise.all([document.fonts?.load("104px Pacifico"), document.fonts?.load("700 128px 'Space Grotesk'")]).then(() => {
+    Promise.all([document.fonts?.load("104px Pacifico"), document.fonts?.load("800 112px Syne")]).then(() => {
       if (!alive) return;
       paintCan(label.image, brand);
       label.needsUpdate = true;

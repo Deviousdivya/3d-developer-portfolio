@@ -156,7 +156,7 @@ function getImg(src) {
   if (!im) { im = new Image(); im.src = src; imgCache[src] = im; }
   return im.complete && im.naturalWidth ? im : null;
 }
-const F = (px, wt = 500, fam = "'Space Grotesk', sans-serif") => `${wt} ${px}px ${fam}`;
+const F = (px, wt = 500, fam = "'IBM Plex Sans', sans-serif") => `${wt} ${px}px ${fam}`;
 const rr = (c, x, y, w, h, r) => { c.beginPath(); c.roundRect(x, y, w, h, r); };
 function fit(c, text, size, wt, maxW, fam) {
   let fs = size;
@@ -400,7 +400,7 @@ export function drawDash(ctx, t, w, h) {
     ctx.font = "11px 'JetBrains Mono', monospace";
     ctx.fillText(k, x + 14, 80);
     ctx.fillStyle = i === 0 ? A : "#e6edf3";
-    ctx.font = "600 26px 'Space Grotesk', sans-serif";
+    ctx.font = "700 26px 'Syne', sans-serif";
     ctx.fillText(typeof v === "number" && v < 100 && i === 2 ? v.toFixed(2) : String(v).replace(/\B(?=(\d{3})+(?!\d))/g, ","), x + 14, 114);
   });
   // bars

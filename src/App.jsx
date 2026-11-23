@@ -33,6 +33,7 @@ export default function App() {
       <footer className="footer">
         <span>© {new Date().getFullYear()} {profile.name}. All rights reserved.</span>
         <span className="footer-links">
+          <a href="/Divya_Bharat_Resume.pdf" download="Divya_Bharat_Resume.pdf">Resume ↓</a>
           {socials.map((s) => (
             <a key={s.name} href={s.href} target={s.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
               {s.name} ↗

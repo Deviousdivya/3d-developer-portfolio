@@ -18,6 +18,7 @@ export default function Contact() {
           Write to me on the screen above or at <a href={`mailto:${profile.email}`}>{profile.email}</a>
         </p>
         <div className="cc-links">
+          <a href="/Divya_Bharat_Resume.pdf" download="Divya_Bharat_Resume.pdf">Resume ↓</a>
           {socials.map((s) => (
             <a key={s.name} href={s.href} target={s.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">{s.name} ↗</a>
           ))}

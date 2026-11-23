@@ -53,6 +53,9 @@ export default function Navbar() {
               {label}
             </a>
           ))}
+          <a className="nav-resume" href="/Divya_Bharat_Resume.pdf" download="Divya_Bharat_Resume.pdf">
+            Resume ↓
+          </a>
         </nav>
         <button className="burger" aria-label="Toggle menu" onClick={() => setOpen(!open)}>
           <span />
